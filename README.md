@@ -1,18 +1,20 @@
-the first thing you must do is run:
+# My Store Backend
+
+## the first thing you must do is run:
 npm install
 
-then you must create a .env file in the root directory with the following content:
+## then you must create a .env file in the root directory with the following content:
 DATABASE_URL="mysql://newUser:123456@localhost:3306/store"
 
-then set Up the Database:
+## then set Up the Database:
 npx prisma migrate dev --name init
 npx prisma generate
 
-then Run the Server:
+## then Run the Server:
 node server.js or using nodemon server.js
 
 ---------------------------------------------------------------
-Project Structure
+## Project Structure
 my-crud-app
 ├── prisma
 │   └── schema.prisma      # Defines models and database connection details
@@ -25,7 +27,7 @@ my-crud-app
 ├── server.js              # Main server file to initialize Express and routes
 └── README.md              # Project documentation
 
-Description of Key Files
+## Description of Key Files
 prisma/schema.prisma: Contains the database schema for the Item model and configures the MySQL datasource.
 routes/itemRoutes.js: Defines CRUD operations for managing Item entries.
 server.js: Sets up the Express server, connects routes, and configures middleware.
@@ -33,7 +35,7 @@ server.js: Sets up the Express server, connects routes, and configures middlewar
 DATABASE_URL="mysql://newUser:123456@localhost:3306/store"
 
 
-API Endpoints
+## API Endpoints
 Method	Endpoint	Description
 POST	/api/items	Create a new item
 GET	/api/items	Retrieve all items
@@ -42,6 +44,6 @@ PUT	/api/items/:id	Update an item by ID
 DELETE	/api/items/:id	Delete an item by ID
 
 
-please note that you must use port 5000 on the server.
+*please note that you must use port 5000 on the server.
 
 
